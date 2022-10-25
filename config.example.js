@@ -37,6 +37,10 @@ const GQL_URL_DEVNET = ""
 const TRANSACTION_URL_DEVNET = ""
 const EXPLORER_URL_DEVNET = ""
 
+const GQL_URL_BERKELEYQA = ""
+const TRANSACTION_URL_BERKELEYQA = ""
+const EXPLORER_URL_BERKELEYQA = ""
+
 export const MAIN_NET_BASE_CONFIG={
     netType:NET_CONFIG_TYPE.Mainnet,
     url:GQL_URL_MAINNET,
@@ -48,6 +52,13 @@ export const TEST_NET_BASE_CONFIG={
   url:GQL_URL_DEVNET,
   txUrl:TRANSACTION_URL_DEVNET,
   explorer:EXPLORER_URL_DEVNET,
+}
+
+export const BERKELEYQA_NET_BASE_CONFIG = {
+  netType: NET_CONFIG_TYPE.QAnet,
+  url: GQL_URL_BERKELEY,
+  txUrl: TRANSACTION_URL_BERKELEYQA,
+  explorer: EXPLORER_URL_BERKELEYQA,
 }
 
 export const UNKNOWN_NET_BASE_CONFIG={
@@ -69,5 +80,10 @@ export const network_config=[
       id: 2,
       name: "Devnet",
       ...TEST_NET_BASE_CONFIG
+    },
+    {
+      id: 3,
+      name: "BerkeleyQA",
+      ...BERKELEYQA_NET_BASE_CONFIG,
     },
 ]
